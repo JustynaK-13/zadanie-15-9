@@ -25,7 +25,7 @@ class App extends React.Component {
       .then(responseJson => this.setState({users: responseJson.items}));
   }
 
-  render() {
+render() {
     return (
       <div>
         <form onSubmit={event => this.onSubmit(event)}>
@@ -38,8 +38,8 @@ class App extends React.Component {
         </form>
         <UsersList users={this.state.users}/>
       </div>
-    );
-  }
+	  );
+	}
 }
 
 class UsersList extends React.Component {
@@ -55,6 +55,7 @@ class UsersList extends React.Component {
     );
   }
 }
+
 class User extends React.Component {
   render() {
     return (
